@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation</title>
+</head>
+<body>
+    <center>
+<h1>Exercice Equation en JS</h1>
+<script type="text/javascript">
+    let a = parseFloat(prompt("Donner premier coeff :"));
+    let b = parseFloat(prompt("Donner deuxieme coeff :"));
+    if (a==0){
+        if (b==0){
+            alert("Ens. solution R");
+        }else{
+            alert ("Ens. solutions vide");
+        }
+    }else {
+        let x = -b/a;
+        alert("Solution : " + x);
+    }
+</script>
+    </center>
+    
+</body>
+</html>
