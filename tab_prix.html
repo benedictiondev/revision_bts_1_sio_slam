@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab prix</title>
+</head>
+<body>
+    <center>
+        <h1>Exercice Tab Prix en JS</h1>
+        <script type="text/javascript">
+            let chaine = prompt("Donner les prix séparés par (;) :");
+            let tab = chaine.split(";").map(Number);
+            let prixMoyen = 0; 
+            let prixMin = tab[0]; 
+            let prixMax = tab[0];
+    for (let i = 0; i < tab.length ; i++){
+        if (tab[i] < prixMin) {
+            prixMin = tab[i];
+        }
+        if (tab[i] > prixMax) {
+            prixMax = tab[i];
+        }
+        prixMoyen = prixMoyen + tab[i];
+    }
+    prixMoyen = prixMoyen / tab.length ;
+    alert ("Le prix moyen est : "+ prixMoyen);
+    alert ("Prix Max :"+prixMax +"et prix Min :"+prixMin);
+
+        </script>
+    </center>
+</body>
+</html>

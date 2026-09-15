@@ -1,0 +1,398 @@
+Algo : rectangle 
+Déclarations 
+	lg, lr, s, p: réel
+
+Début 
+	Afficher("Donner la longeur:")
+	Saisir(lg)
+	Afficher("Donner la largeur")
+	Saisir(lr)
+	p  <- (lg + lr) * 2
+	s  <- lg * lr
+	Afficher("Le périmètre est de :", p)
+	Afficher("La surface est de :", s)
+
+fin rectangle
+
+C
+ #include <stdio.h>
+int main (){
+	float lg,lr,s,p;
+	printf("Donner la longueur : ");
+	scanf("%f",& lg);
+	printf("Donner la largeur : ");
+	scanf("%f",& lr);
+	s = lg*lr;
+	p = (lg+lr)*2;
+	printf("\nLe périmètre est de : %f", p);
+	printf("\nLa surface est de : %f", s);
+
+	return 0; 
+}
+
+
+Pour lundi avoir tous les comptes  3 vm sur machine cette plateforme a terminer
+
+
+
+Algo : Triangle
+Déclarations : 
+	d, c, b, h, s, p : reel
+Debut
+Afficher(‘’Donner la base :’’)
+Saisir(b)
+Afficher(‘’Donner le coté1 :’’)
+Saisir(c)
+Afficher(‘’Donner le coté2 :’’)
+Saisir(d)
+Afficher(‘’Donner la hauteur :’’)
+Saisir(h)
+s <- (b*h)÷2
+P <- b+c+d
+Afficher (‘’Le périmètre est de :’’,p)
+Afficher (‘’La surface est de :’’,s)
+
+Fin triangle
+
+Algo : Produit
+Déclarations : p, q, t
+	p, t : reel
+	q : entier
+Début
+Afficher(‘’Rentrez le prix unitaire du produit :’’)
+Saisir(p)
+Afficher(‘’Rentrez la quantité du produit :’’)
+Saisir(q)
+t <- p*q
+Afficher (‘’Le prix total du produit est de :’’,t)
+
+Fin produit
+
+
+Algo salaire
+
+Déclarations : s, p, r, n, b
+	s, p, r, n, b : reel
+Debut
+Afficher(‘’Entrer salaire brut:’’)
+Saisir(s)
+Afficher(‘’Entrer primes:’’)
+Saisir(p)
+Afficher(‘’Entrer retenues:’’)
+Saisir(r)
+b <- s+p
+Afficher(‘’Le salaire avec prime est de :’’,b)
+n <- (s+p)-r
+Afficher (‘’Le salaire net est de :’’,n)
+
+Fin salaire
+
+
+
+Algo Majorité
+Variables : a
+	a : entier
+Début
+Afficher(‘’Saisir un âge	:’’)
+Saisir(a)
+Si a ≥ 18 ALORS
+Afficher(‘’Vous êtes majeur’’)
+Sinon
+Afficher(‘’Vous êtes mineur’’)
+FINSI
+
+Les alternaives en algo
+Algo  : Alternative simple
+		Si condition 
+			Alors instruction
+		Finsi
+	Alternative double :
+		Si condition 
+			Alors instruction_1
+			Sinon instruction_2
+		Finsi
+	Choix multiple
+		Selon expression faire
+			cas valeur : instruction
+			finselon
+
+Exo 1 Ecrire un algo, Dev C, PHP, et JS qui permet de résoudre dans R l’équation du premier degré a*X+B=0
+Exo 2 Ecrire un algo, Dev C, PHP, et JS qui reçoit une date et teste sa validité
+
+
+Algo : équation 
+Declaration 
+	a, b , x : reel
+Debut 
+	Afficher(‘’Donner le premier coefficient de l’equation :’’)
+	Saisir(a)
+	Afficher (‘’Donner le deuxième coefficient :’’)
+	Saisir(b)
+Si a = 0
+	Alors Si b = 0
+		Alors Afficher (‘’Ensemble des solutions R’’)
+		Sinon Afficher (‘’Ensemble des solutions est vide’’)
+		Finsi
+	Sinon
+		x <- (-b/a)
+		Afficher (‘’Solution :’’ , x)
+	Fin Si
+Fin equation
+
+EN C
+#include <stdio.h>
+Int main (){
+	float a, b, x;
+	printf("Donner le premier coefficient : ");
+	scanf("%f",& a);
+	printf("Donner le deuxième coefficient : ");
+	scanf("%f",& b);
+	if (a==0){
+		if (b==0{
+		printf(‘’Ens solutions est R’’);
+}
+}else{
+		x = -b/a;
+		printf(‘’Ens solutions est : %f’’ , x);
+	
+}
+	return 0;
+}
+
+
+3. Les boucles
+- La boucle tant que : while (condition)
+- La boucle faire-tant que : do{..}while(condition)
+- La boucle Pour : for(initialisation; condition; evolution ) {..}
+Exo : écrire un algo Dev C, PHP, et JS qui permet de saisir un entier et d’afficher ses diviseurs.
+- écrire un algo Dev C, PHP, et JS qui permet de déterminer tous les nombres parfaits compris entre deux bornes saisies par l’utilisateur. Un nombre est dit parfait s’il est égal a la somme de ses diviseurs sauf lui même. 28 est parfait = 1+2+4+7+14.
+
+Algo : diviseurs
+Declarations
+	nb, div : entier
+Debut
+	Afficher(‘’Donner un nombre entier: ’’)
+	Saisir(nb)
+	Pour div allant de 1 a nb faire
+		Si nb * div = 0
+			Alors Afficher(‘’div, ‘’est un diviseur..’’)
+		Finsi
+	Fin pour
+
+Fin Diviseurs
+
+#include <stdio.h>
+ Int main (){
+float nb, div;
+	printf("’Donner un nombre entier : ");
+	scanf("%f",& nb);
+	for ( div = 1; div < = nb; div ++ )
+		{
+		if (nb * div == 0){
+		printf(‘’%d, est un diviseur’’ , div);
+return 0;
+}
+
+4. Les tableaux
+Algo : nomTab : tableau[taille] de type
+C : type nomTab[taille]
+PHP : $nomTab =[]
+JS : let nomTab = [];
+
+Algorithmes = remplir un tableau, afficher les éléments, calculer la moyenne, le min, le max et trier un tableau
+
+Exo 1: Ecrire un algo, Dev C, PHP et JS qui permet de saisir dix prix et afficher la maoyenne, le prix min et le prix max.
+Exo 2 : Ecrire un algo, Dev C, PHP et JS qui permet de saisir dix notes et les tri en ordre croissant.
+
+Algo : Tableau
+Déclaration
+	Tab : tableau[10] de reel
+	prixMoyen,prixMax, priMin : reel
+	i : entier
+Début
+	//remplir le tableau
+	Pour i allant de 1 a 10 faire
+		Afficher (‘’Donner un. prix: ’’)
+		Saisir (tab[i])
+	fin pour
+	//faire les calculs
+	prixMoyen <- 0
+	prixMax <- tab [1]
+	prixMin <- tab [1]
+	Pour i allant de 1 a 10 faire
+		Si tab[I] > prixMax
+			Alors prixMax <- tab[i]
+		Fin si
+		Si tab[I] > prixMin
+			Alors prixMin <- tab[i]
+		Fin si
+		prixMoyen <- tab[I] + prixMoyen
+	Fin pour
+	//afficher les résultats
+	Afficher (‘’Le Prix Moyen : ‘’, prixMoyen)
+	Afficher (‘’Le Prix Max : ‘’, Max)
+	Afficher (‘’Le Prix Min : ‘’, prixMin)
+Fin Tableau
+
+
+Dev C
+#include <stdio.h>
+Int main (){
+float tab [10];
+Float prixMax, prixMoeyn, prixMax;
+Int  i;
+For(i=0; i < 10 ; i++){
+	printf(‘’Donner un prix: ‘’)
+	scanf(‘’%f, &tab[I]
+}
+prixMoyen = 0;
+prixMax tab = [0];
+prixMin = tab[0];
+For (i=0; i<10; i++{
+	if(tab[I] > prixMax){}
+}
+Return 0;
+}
+
+Explode 
+Implode 
+
+________________________________
+
+5 Les procédures et les fonctions
+
+Déclaration d’une procédure
+Procédure nomProc (listes des arguments)
+Déclaration
+	//variables locales
+Début 
+	//traitement
+
+Fin nomProc
+
+Appel de la procédure : nomProc (liste paramètres)
+
+Déclaration d’une fonction :
+Fonction nomFct (liste arguments) : type
+Déclaration 
+	//variables locales
+Début
+	//traitement
+	retourner expression
+Fin nomFct
+Appel de la fonction :
+nomVariable <- nomFct (listeparametre)
+
+Exo 1 : Ecrire une procédure qui reçoit un nombre entier et affiche la liste de ses diviseurs
+Exo 2 : Ecrire une fonction qui reçoit un tableau de prix et renvoie la moyenne des prix
+
+_________________________________________
+
+Procédure liste_diviseurs (nb : entier )
+Déclaration	
+	i : entier
+Début
+	Pour i allant de 1 a nb faire 
+		si nb % i = 0
+			Alors afficher(i, ‘’ est diviseur’’)
+		Fin si
+	Fin pour
+Fin liste_diviseur
+
+____________________
+#include <stdio.h>
+Void liste_diviseurs (int nb){
+	int i;
+	for (i=1; i<=nb; i++){
+		if (nb % i==0){
+			printf("%d est un diviseur." ,i);
+		}
+	}
+
+}
+Int main (){
+	int nb;
+	printf("Dinner un nombre entier :");
+	scanf("%d" , &nb);
+	//appel la procedure
+	liste_diviseurs(nb)
+	return 0;
+	
+}
+
+
+Les fichiers
+_________________________________________
+6. Les fichiers
+Fichier : stockage permanent des données
+Déclaration 
+	NnomFichier : fichier
+		FILE * nomFichier;
+
+Operations sur les fichiers
+	nomFichier <- ouvrir (nomPhysique, mode)
+	fermer (nomFichier)
+	Lire(nomFichier, nomVariable)
+	Ecrire(nomFichier, nomVariable)
+	tester la fin de fichier : fin_fichier(nomFichier)
+
+EN langage C et PHP :
+	fopen, fclose, fgetc, fputc, fgets, fputs, fprintf, fsccanf, feof
+
+___________________________________________________
+
+Exo 1 : Ecrire un algo, Dev C, PHP et JS qui permet de faire le copier coller d'un fichier source vers la destination caractere par caractere
+Exo 2: Ecrire un algo Dev C, PHP et JS qui permet d'editer une facture composées de plusieurs prix de produits : 
+designattion prix quantite. Il inscrit dans le fichier le prix total de la factiure
+
+___________________________
+Algo: copier_coller
+Déclaration 
+	nomS, nomD : chaine
+	fs, fs : fichier
+	car : caractere
+Début 
+	Afficher ("Donner le nom de la source:")
+	Saisir(nomS)
+	Afficher ("Donner le nom de la destination:")
+	Saisir(nomD)
+	fs <- ouvrir (nomS, "lecture")
+	fd <- ouvrir (nomD, "ecriture")
+	tant que fin_fichier(fs) = faux faire
+		lire (fs, car)
+		ecrire (fd, car)
+	Fin tantque
+	fermer(fs)
+	fermer(fs)
+	Afficher ("Operation copier -coller terminee")
+Fin copier_coller
+
+En lagage C
+
+_______________________________
+#include <stdio.h>
+int main (){
+	char nomS [20], nomD[20];
+	FILE *fs, *fd;
+	printf("Donner la source:")
+	scanf("%s", nomS);
+	printf("Donner la destination:")
+	scanf("%s", nomD);
+	fs = fopen(nomS, "r");
+	fd = fopen(nomD, "w");
+	while ( ! feof(fs)){
+		car = fgetc(fs);
+		fputc(car, fd);
+
+	}
+	fclose(fd);
+	fclose(fd);
+	return 0;
+}
+
+}
+
+
+
+
+

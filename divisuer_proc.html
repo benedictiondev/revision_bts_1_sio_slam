@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diviseurs Proc</title>
+</head>
+<body>
+    <center>
+        <h1>Exerccice Diviseurs avec procedure JS</h1>
+   
+   <script type="text/javascript">
+    function liste_diviseurs(nb){
+        let i ;
+        for (i=1; i<=nb; i++){
+            if (nb %1 ==0){
+                alert (i + "est un diviseur");
+            }
+        }
+    }
+    let nb = parseInt(prompt("Donner un entier :"));
+    //appel de la procédure
+    liste_diviseurs(nb);
+   </script>
+  
+    
+</body>
+</html>
